@@ -1,0 +1,55 @@
+v3.0
+New Features/Improvements:
+- Modules addon released. Configure everything from the editor, with all the usual module functionality.
+- The server needs to run the mod while playing the mission.
+- Other clients (headless or player) will not display debug hints or be able to access the debug if they do not run the mod.
+Fixes:
+- Rebalancing debug will always display the correct HC names.
+- "ignore" and "Ignore" now checked for by default (but not "iGnOrE", for example).
+- Respawn debug error fixed.
+
+v2.3
+New Features/Improvements:
+- Rebalancing added. If one HC has control of more units than another, script will attempt to even the load. However, if a HC disconnects, trigger syncs will still be lost.
+Fixes:
+- More efficient code.
+
+v2.2
+Fixes:
+- Waypoint duplication workaround no longer required. If a group is waiting for trigger activation while HC transfer occurs, the group will not ignore this trigger.
+
+v2.1
+Fixes:
+- Unit count code amended.
+
+v2.0
+New Features/Improvements:
+- 3D debug mode. Shows groups transfer to HCs. Gives description of where each group is local to, if not on a HC.
+- Debug mode can be turned on/off while the mission is in progress, via an option on the action menu. Debug mode script parameter now relates to who can activate debug mode: everyone - true, admin/host only - false.
+- Arma 3 support modules automatically compatible, no work around required. Units/groups can still be ignored using script parameter 8, as before.
+Fixes:
+- Small efficiencies made and improved variable naming.
+
+v1.2
+New Features/Improvements:
+- Units can now be ignored by the transfer script by specifying either their name, class name, group name, synced module name, vehicle name or vehicle class name. This is done in the init.sqf file. There is a new parameter for this.
+- This can also be achieved by putting "ignore" as part of any of the above names.
+
+v1.1
+New Features/Improvements:
+- Units can now be ignored by the transfer to HC script. Put "ignore" as part of the unit's name, e.g.: CSAT1ignore2. The whole group will be ignored if one unit of the group is named.
+- Initial setup report added. This shows the number of units transferred to the HC after the first cycle. Can be turned off within the init.sqf file.
+- Debug mode now visually improved. Also, debug is switched off by default.
+- Support modules, and other modules, can be ignored by the transfer to HC script. Put "ignore" as part of the module's name, e.g.: Supportignore1. Required step for using support modules.
+- More features demonstrated in the Headless Test Mission.
+Fixes:
+- Hints now display silently.
+- Non-recurring mode fixed.
+- Improved algorithm.
+
+v1.0.1
+Fixes:
+- No longer displays errors in the Arma Launcher.
+
+v1.0
+- First release
